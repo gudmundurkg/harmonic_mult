@@ -12,19 +12,32 @@
     #else
         #print ("Illegal Choice")
 
-choice_str = input("(h)armonic, (m)ultiplication or (q)uit:")
-#series_int = int(input("Series length:"))
+choice_str = input("(h)armonic, (m)ultiplication or (q)uit: ")
+
+harmonic_base = 1
+harmonic_sum = 1
+denominator = 1
 egyptian_sum = 0
+
+
 while choice_str == "m" or choice_str == "h" or choice_str == "q":
     if choice_str == "q":
         break
-    #elif choice_str == "h":
-    
+    elif choice_str == "h":
+        length_int = int(input("Series length: "))
+        print(float(harmonic_base))
+        for number in range(1,length_int):
+            denominator += 1
+            harmonic = float((harmonic_base/denominator))
+            harmonic = round(harmonic,4)
+            harmonic_sum += harmonic
+            print(harmonic)
+        print("Sum of series:", harmonic_sum)
     elif choice_str == "m":
         first_int = int(input("First integer: "))
         second_int = int(input("Second integer: "))
         if second_int % 2 == 0:
-            None
+            continue
         else: 
             egyptian_sum += first_int
         print(first_int, second_int)
@@ -38,7 +51,7 @@ while choice_str == "m" or choice_str == "h" or choice_str == "q":
                 egyptian_sum += first_int
         print("Product:",egyptian_sum)
     egyptian_sum = 0
-    choice_str = input("(h)armonic, (m)ultiplication or (q)uit:")
+    choice_str = input("(h)armonic, (m)ultiplication or (q)uit: ")
 
 
 
