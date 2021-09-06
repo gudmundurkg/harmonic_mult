@@ -19,6 +19,7 @@ if choice_str == "m" or choice_str == "h" or choice_str == "q":
                 harmonic = float((harmonic_base/denominator))
                 harmonic = round(harmonic,4)
                 harmonic_sum += harmonic
+                harmonic_sum = round(harmonic,4)
                 print(harmonic)
             print("Sum of series:", harmonic_sum)
         elif choice_str == "m":
