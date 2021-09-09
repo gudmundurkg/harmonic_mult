@@ -46,6 +46,7 @@ while choice_str != "q":
     denominator = 1
     
     choice_str = input("(h)armonic, (m)ultiplication or (q)uit: ")
+       
 
 
 
